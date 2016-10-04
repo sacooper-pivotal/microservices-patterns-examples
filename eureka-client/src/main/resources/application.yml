@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: javaclient
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${vcap.services.eureka-service.credentials.uri:127.0.0.1:8761}/eureka/
+    instance:
+      hostname: ${vcap.application.uris[0]:localhost}
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    nonSecurePort: 80

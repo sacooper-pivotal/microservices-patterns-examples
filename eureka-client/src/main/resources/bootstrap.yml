@@ -1,0 +1,3 @@
+spring:
+  appplication:
+    name: javaclient
